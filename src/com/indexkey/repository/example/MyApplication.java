@@ -13,9 +13,9 @@ public class MyApplication extends Application {
 		DataBaseProvider.setDataBaseName("MyRepositoryDb");
 		DataBaseProvider.setDataBaseVersion(1);
 		DataBaseProvider.AddTableDdlSql("CREATE TABLE [Rooms] "
-				+ "( [RoomID] VARCHAR(50) NOT NULL, "
-				+ "[RoomName] VARCHAR(50)," + "[Address] VARCHAR(50),"
-				+ " CONSTRAINT [] PRIMARY KEY ([RoomID]));");
+				+ "( [RoomID] Integer  PRIMARY KEY autoincrement NOT NULL, "
+				+ "[RoomName] VARCHAR(50)," + "[Address] VARCHAR(50)"
+				+ ");");
 		// DataBaseProvider.AddTableSql(User)
 	}
 

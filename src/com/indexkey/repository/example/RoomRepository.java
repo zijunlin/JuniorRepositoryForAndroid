@@ -8,7 +8,6 @@ import android.database.Cursor;
 
 import com.indexkey.repository.IRepository;
 import com.indexkey.repository.dbutility.CursorFormatHelper;
-import com.indexkey.repository.dbutility.ICursorDeserializer;
 import com.indexkey.repository.dbutility.SqliteHelper;
 
 /**
@@ -17,8 +16,7 @@ import com.indexkey.repository.dbutility.SqliteHelper;
  * @author linzijun
  * 
  */
-public class RoomRepository implements IRepository<Room>,
-		ICursorDeserializer<Room> {
+public class RoomRepository implements IRepository<Room> {
 
 	private final String TABLE_NAME = "[Rooms]";
 	private final String COL_ROOM_ID = "RoomID";
@@ -80,11 +78,11 @@ public class RoomRepository implements IRepository<Room>,
 		StringBuilder sqlStr = new StringBuilder();
 		sqlStr.append("insert into ");
 		sqlStr.append(TABLE_NAME);
-		sqlStr.append(String.format("(%1s,%2s,%3s)", COL_ROOM_ID,
-				COL_ROOM_NAME, COL_ROOM_ADDRESS));
-		sqlStr.append(" values(?,?,?)");
-		Object[] parameters = new Object[] { entity.getRoomId(),
-				entity.getName(), entity.getAddress() };
+		sqlStr.append(String.format("(%1s,%2s)", COL_ROOM_NAME,
+				COL_ROOM_ADDRESS));
+		sqlStr.append(" values(?,?)");
+		Object[] parameters = new Object[] { entity.getName(),
+				entity.getAddress() };
 		db.execSql(sqlStr.toString(), parameters);
 
 	}
