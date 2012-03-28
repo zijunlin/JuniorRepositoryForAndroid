@@ -40,3 +40,7 @@ Don't forget change AndroidManifest.xml ,Add a android:name in the application n
 ## Attention
 
 * It¡¯ Not safe to Multi-threaded
+
+* If something is wrong in you programming about the Datebase ,you need to delete the Datebase and debug the project again.
+
+* You must be sure the SQL is no wrong.beacuse this project unable to check you SQL staemnet .
