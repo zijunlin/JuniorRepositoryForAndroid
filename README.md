@@ -12,7 +12,7 @@
 
 ## How To Do
 
-1.Create a MyApplication who extends Application.and set then Db name ¡¢version and Table DDL SQL statemnet.e.g.
+1.Create a MyApplication who extends Application.and set then Db name ï¿½ï¿½version and Table DDL SQL statemnet.e.g.
 ```
 public class MyApplication extends Application {
 
@@ -31,6 +31,7 @@ public class MyApplication extends Application {
 
 }
 ```
+
 Don't forget change AndroidManifest.xml ,Add a android:name in the application note
 
 2.Create a Repository who implements IRepository<>
@@ -39,7 +40,7 @@ Don't forget change AndroidManifest.xml ,Add a android:name in the application n
 
 ## Attention
 
-* It¡¯ Not safe to Multi-threaded
+* It's not safe to Multi-threaded
 
 * If something is wrong in you programming about the Datebase ,you need to delete the Datebase and debug the project again.
 
