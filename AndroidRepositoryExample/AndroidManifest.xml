@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.indexkey.repository"
+    package="com.indexkey.repository.example"
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="3" />
+    <uses-sdk android:minSdkVersion="7" />
 
-    <application
-        android:name=".example.MyApplication"
+     <application
+        android:name=".MyApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
-        <activity android:name=".example.RoomListActivity" >
+        <activity android:name=".RoomListActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" >
                 </action>
@@ -19,5 +19,6 @@
             </intent-filter>
         </activity>
     </application>
+
 
 </manifest>

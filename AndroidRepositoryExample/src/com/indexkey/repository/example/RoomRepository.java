@@ -18,7 +18,7 @@ import com.indexkey.repository.dbutility.SqliteHelper;
  */
 public class RoomRepository implements IRepository<Room> {
 
-	private final String TABLE_NAME = "[Rooms]";
+	private final String TABLE_NAME = "Rooms";
 	private final String COL_ROOM_ID = "RoomID";
 	private final String COL_ROOM_NAME = "RoomName";
 	private final String COL_ROOM_ADDRESS = "Address";
