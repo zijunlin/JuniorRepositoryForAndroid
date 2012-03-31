@@ -1,6 +1,7 @@
 package com.indexkey.repository.example;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import android.content.Context;
@@ -111,4 +112,31 @@ public class RoomRepository implements IRepository<Room> {
 		db.execSql(sqlStr.toString(), parameters);
 	}
 
+	/**
+	 * the Last 
+	 */
+	@Override
+	public void EditEntity(HashMap<String, Object> ColAndValue) {
+		StringBuilder sqlStr = new StringBuilder();
+		sqlStr.append("Update ");
+		sqlStr.append(TABLE_NAME);
+		sqlStr.append(" set ");
+		int i = 0;
+		for (String item : ColAndValue.keySet()) {
+			if (i == 0) {
+				sqlStr.append(item + "=?");
+			}
+			
+			i++;
+			sqlStr.append("," + item + "=?");
+			if(i==ColAndValue.size())
+			{
+				sqlStr.append(String.format(" where %1s=? ", item));
+			}
+		}
+	
+		Object[] parameters =ColAndValue.values().toArray();
+		db.execSql(sqlStr.toString(), parameters);
+		
+	}
 }
